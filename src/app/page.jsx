@@ -1,5 +1,7 @@
 import styles from "./page.css";
 
-export default function Home() {
+const Home = () => {
   return <h1>Hello</h1>;
 }
+
+export default Home

@@ -1,6 +1,9 @@
-import { Inter } from "next/font/google";
+import { Inter } from "next/font/google"; // Font
+import { FaApple } from "react-icons/fa6"; // Icons
+import { StrictMode } from 'react'; // Enabling additional checks 
+import Nav from "./components/Nav/nav.jsx";
+import Rank from "./components/Rank/rank.jsx";
 import "./globals.css";
-import { FaApple } from "react-icons/fa6";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,14 +12,26 @@ export const metadata = {
   description: "Created by Igor S.",
 };
 
-export default function RootLayout({ children }) {
-  return (
+const RootLayout = ({ children }) => (
+  <StrictMode>
     <html lang="en">
       <body className={inter.className}>
-        <FaApple size="50px"/>
-        {children}
-        <FaApple/>
+        <div className="main"> 
+          <Nav/>
+
+          <FaApple/>
+
+          <div className="content">
+          {children}
+          </div>
+
+          <FaApple/>
+
+          <Rank/>
+        </div>
       </body>
     </html>
-  );
-}
+  </StrictMode>
+)
+
+export default RootLayout
