@@ -1,7 +1,7 @@
 import './rank.css'
 
 const Rank = () => (
-    <div id="rank">
+    <div className="rank">
     <ul>
       <li>
         <a><i className="fa-solid fa-circle-user fa-2xl"></i></a>

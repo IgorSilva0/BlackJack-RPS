@@ -19,13 +19,9 @@ const RootLayout = ({ children }) => (
         <div className="main"> 
           <Nav/>
 
-          <FaApple/>
-
           <div className="content">
           {children}
           </div>
-
-          <FaApple/>
 
           <Rank/>
         </div>

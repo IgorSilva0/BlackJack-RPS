@@ -1,6 +1,5 @@
 .sideNavBar {
   display: flex;
-  padding: 0 5px;
 }
 
 .ulSideBar {
@@ -8,8 +7,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+  text-align: center;
   padding: 10px 15px;
-  margin: 15px 20px;
+  margin: 15px 5px;
   width: 30px;
 }
 
