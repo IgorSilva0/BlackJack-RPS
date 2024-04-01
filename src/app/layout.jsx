@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google"; // Font
-import { FaApple } from "react-icons/fa6"; // Icons
 import { StrictMode } from 'react'; // Enabling additional checks 
 import Nav from "./components/Nav/nav.jsx";
 import Rank from "./components/Rank/rank.jsx";
@@ -19,10 +18,11 @@ const RootLayout = ({ children }) => (
         <div className="main"> 
           <Nav/>
 
-          <div className="content">
-          {children}
+          <div className="contentBox">
+          <h1>Gaming Combo</h1>
+          <div className="content">{children}</div>
           </div>
-
+          
           <Rank/>
         </div>
       </body>

@@ -9,33 +9,16 @@
   justify-content: space-around;
   text-align: center;
   padding: 10px 15px;
-  margin: 15px 5px;
+  margin: 15px 20px;
   width: 30px;
 }
-
-.ulSideBar li a i {
-  transition: ease-in-out 0.3s;
-  text-shadow: red 0 0 10px;
+.navBtn {
+  color: #ba64e9;
+  font-size: 23px;
 }
-.ulSideBar li a i:hover {
-  color: red;
-  font-size: 140%;
-  text-shadow: rgb(255, 255, 255) 0 0 10px;
-}
-.ulSideBar li a i:active {
-  color: rgb(0, 0, 0);
-  font-size: 140%;
+.navBtn:hover {
+  color: white;
 }
 .ulSideBar li:nth-child(6) {
   margin-bottom: 10rem;
-}
-
-.ulSideBar li:nth-child(7) a i:hover {
-  color: rgb(0, 0, 0);
-  text-shadow: rgb(255, 255, 255) 0 0 15px;
-  font-size: 150%;
-}
-.ulSideBar li:nth-child(8) a i:hover {
-  color: rgb(217, 188, 0);
-  text-shadow: rgb(255, 255, 255) 0 0 15px;
 }

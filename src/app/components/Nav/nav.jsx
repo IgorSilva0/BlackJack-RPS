@@ -1,31 +1,31 @@
+import { FaHome,FaGamepad,FaImages,FaBell,FaCogs,FaSun } from "react-icons/fa"; // Icons
+import { FaRankingStar } from "react-icons/fa6"; // Icon
+import Link from "next/link";
 import './nav.css'
 
 const Nav = () => (
     <nav className="sideNavBar">
           <ul className="ulSideBar">
             <li>
-              <a href="#Home"><i className="fa-solid fa-house fa-lg">1</i></a>
+              <Link href="#Home"><FaHome className="navBtn"/></Link>
             </li>
             <li>
-              <a href="#Games"><i className="fa-solid fa-gamepad fa-lg">2</i></a>
+              <Link href="#Games"><FaGamepad className="navBtn" size="25px"/></Link>
             </li>
             <li>
-              <a href="#Gallery"><i className="fa-solid fa-image fa-lg">3</i></a>
+              <Link href="#Gallery"><FaImages className="navBtn" /></Link>
             </li>
             <li>
-              <a href="#Bell"><i className="fa-solid fa-bell fa-lg">4</i></a>
+              <Link href="#Bell"><FaBell className="navBtn"/></Link>
             </li>
             <li>
-              <a href="#Settings"><i className="fa-solid fa-gear fa-lg">5</i></a>
+              <Link href="#Settings"><FaCogs className="navBtn"/></Link>
             </li>
             <li>
-              <a href="#Ranking"><i className="fa-solid fa-ranking-star fa-lg">6</i></a>
-            </li>
-            <li id="nightMode">
-              <a href="#DarkMode"><i className="fa-solid fa-moon fa-lg">7</i></a>
+              <Link href="#Ranking"><FaRankingStar className="navBtn"/></Link>
             </li>
             <li id="lightMode">
-              <a href="#LightMode"><i className="fa-solid fa-sun fa-lg">8</i></a>
+              <Link href="#LightMode"><FaSun className="navBtn"/></Link>
             </li>
           </ul>
         </nav>

@@ -10,16 +10,15 @@
 
 .rank img {
   display: block;
-  margin: 10px auto;
+  margin: 5px auto;
+  box-shadow: #bb51f5 0 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .rank li i {
   transition: ease-in-out 0.3s;
-  text-shadow: red 0 0 10px;
-}
-
-.rank img {
-  box-shadow: red 0 0 10px;
 }
 
 .tooltip {
@@ -58,4 +57,30 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.tooltip .image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .trophy-badge {
+  position: absolute;
+  bottom: 0px;
+  right: -5px;
+  font-size: 15px;
+  background-color: black;
+  box-shadow: #bb51f5 0 0 10px;
+  color: black;
+  padding: 1px 2px;
+  padding-bottom: 2px;
+  border-radius: 50%;
+}
+
+.score {
+  background-color: #bc51f5b0;
+  border-radius: 10px;
+  color: white;
+  font-size: 13px;
+  margin: 0;
 }
