@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google"; // Font
 import { StrictMode } from 'react'; // Enabling additional checks 
-import Nav from "./components/Nav/nav.jsx";
-import Rank from "./components/Rank/rank.jsx";
+import Nav from "./components/nav/nav.jsx";
+import Rank from "./components/rank/rank.jsx";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });

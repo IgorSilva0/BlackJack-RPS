@@ -67,7 +67,7 @@
 .tooltip .trophy-badge {
   position: absolute;
   bottom: 0px;
-  right: -5px;
+  left: -5px;
   font-size: 15px;
   background-color: black;
   box-shadow: #bb51f5 0 0 10px;
