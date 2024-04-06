@@ -6,7 +6,7 @@ const Rank = () => (
     <ul>
       <li className="tooltip">
         <div className="image-container">
-          <img src="./imgs/rank-img.png" alt="Rank Image" />
+          <img src="/imgs/rank-img.png" alt="Rank Image" />
           <FaStar className="trophy-badge" color="gold"/>
         </div>
         <span className="tooltiptext">Test3</span>
@@ -15,7 +15,7 @@ const Rank = () => (
     
       <li className="tooltip">
         <div className="image-container">
-          <img src="./imgs/rank-img.png" alt="Rank Image" />
+          <img src="/imgs/rank-img.png" alt="Rank Image" />
           <FaStar className="trophy-badge" color="silver"/>
         </div>
         <span className="tooltiptext">Test3</span>
@@ -24,7 +24,7 @@ const Rank = () => (
 
       <li className="tooltip">
         <div className="image-container">
-          <img src="./imgs/rank-img.png" alt="Rank Image" />
+          <img src="/imgs/rank-img.png" alt="Rank Image" />
           <FaStar className="trophy-badge" color="#f7a206"/>
         </div>
         <span className="tooltiptext">Test3</span>

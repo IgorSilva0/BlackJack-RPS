@@ -1,0 +1,33 @@
+h2 {
+  padding-top: 20px;
+  color: white;
+}
+
+/* Button style */
+.btnStyle:hover,
+.btnStyle:focus,
+#rpsMenu:hover,
+#rpsMenu:focus {
+  color: #ffffff;
+  background: #e70707;
+  border: 1px solid #e70707;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #e70707, 0 0 20px #e70707, 0 0 50px #e70707,
+    0 0 100px #e70707;
+}
+.btnStyle {
+  padding: 10px 20px;
+  margin: 10px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
