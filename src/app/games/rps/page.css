@@ -10,13 +10,17 @@
 }
 h2 {
   color: white;
-  padding: 30px 0px;
+  padding: 20px 0px;
   font-weight: 700;
+  margin: 0px;
 }
-h3 {
+h3,
+h4 {
+  padding: 10px 0px;
   color: white;
   font-weight: 600;
 }
+
 .rules {
   margin-top: 30px;
   width: 170px;
@@ -50,4 +54,98 @@ h3 {
   border: 1px solid #ffffff80;
   transition: 0.5s ease;
   user-select: none;
+}
+
+/* Rock, paper and scissors imgs */
+.rps {
+  width: 7rem;
+  height: 8.3rem;
+  margin: 25px 20px;
+}
+.rps:hover {
+  animation: shake 0.4s;
+  cursor: pointer;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) translate3d(0px);
+  }
+  25% {
+    transform: rotate(-5deg) translateX(-5px);
+  }
+  50% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  75% {
+    transform: rotate(5deg) translateX(5px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+
+/* ThreeTwoOne Hands */
+
+.handOne,
+.handTwo {
+  width: 7rem;
+  height: 8.3rem;
+  margin: 60px 20px;
+}
+.handOne {
+  rotate: 90deg;
+  padding-top: 7%;
+  animation: handOneShake 3s;
+}
+.handTwo {
+  rotate: -90deg;
+  padding-top: 7%;
+  animation: handTwoShake 3s;
+}
+
+@keyframes handOneShake {
+  0% {
+    transform: rotate(0deg) translate3d(0px);
+  }
+  14% {
+    transform: rotate(-20deg) translateX(-20px);
+  }
+  30% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  44% {
+    transform: rotate(-20deg) translateX(-20px);
+  }
+  55% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  90% {
+    transform: rotate(-20deg) translateX(-20px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+@keyframes handTwoShake {
+  0% {
+    transform: rotate(0deg) translate3d(0px);
+  }
+  14% {
+    transform: rotate(20deg) translateX(20px);
+  }
+  30% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  44% {
+    transform: rotate(20deg) translateX(20px);
+  }
+  55% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  90% {
+    transform: rotate(20deg) translateX(20px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0px);
+  }
 }
