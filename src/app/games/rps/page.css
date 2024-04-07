@@ -29,9 +29,7 @@ h4 {
 
 /* Button style */
 .playRps:hover,
-.playRps:focus,
-#rpsMenu:hover,
-#rpsMenu:focus {
+.playRps:focus {
   color: #ffffff;
   background: #1eff00;
   border: 1px solid #1eff00;
@@ -45,10 +43,36 @@ h4 {
   text-transform: uppercase;
   border-radius: 8px;
   font-size: 16px;
-  font-weight: 600;
-  color: #000000;
+  font-weight: 500;
+  color: #ffffff;
   text-shadow: none;
-  background-color: #1eff00;
+  background-color: #229e11bb;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.menuBtn:hover,
+.menuBtn:focus {
+  color: #ffffff;
+  background: #e70707;
+  border: 1px solid #e70707;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #e70707, 0 0 20px #e70707, 0 0 50px #e70707,
+    0 0 100px #e70707;
+}
+.menuBtn {
+  padding: 10px 20px;
+  margin: 10px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: none;
+  background-color: #9e1111bb;
   cursor: pointer;
   box-shadow: transparent;
   border: 1px solid #ffffff80;
@@ -148,4 +172,13 @@ h4 {
   100% {
     transform: rotate(0deg) translateX(0px);
   }
+}
+
+/* Result of the game */
+
+.playerChoice,
+.pcChoice {
+  width: 7rem;
+  height: 8.3rem;
+  margin: 25px 20px;
 }

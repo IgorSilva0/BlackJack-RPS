@@ -7,9 +7,7 @@ h2 {
 
 /* Button style */
 .btnStyle:hover,
-.btnStyle:focus,
-#rpsMenu:hover,
-#rpsMenu:focus {
+.btnStyle:focus {
   color: #ffffff;
   background: #e70707;
   border: 1px solid #e70707;
