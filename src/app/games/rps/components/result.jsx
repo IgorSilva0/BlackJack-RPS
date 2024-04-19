@@ -22,14 +22,25 @@ const Result = ({ propsObj }) => {
         }
     }, [propsObj.playerChoice, propsObj.pcChoice, propsObj.setRounds]);
 
+    const menu = (btn) => {
+        btn.preventDefault()
+        propsObj.setStart(null)
+        propsObj.setRounds(1)
+    }
+    const again = (btn) => {
+        btn.preventDefault()
+        propsObj.setChoice(null)
+        propsObj.setRounds(propsObj.rounds + 1)
+    }
+
     return (
         <>
             <h3>{instruction}</h3>
             <img src={"/imgs/" + propsObj.pcChoice + "Hand.png"} className='pcChoice' alt="PC Choice" />
             <img src={"/imgs/" + propsObj.playerChoice + "Hand.png"} className='playerChoice' alt="Player Choice" />
             <br/>
-            <button className='menuBtn'>Menu</button>
-            <button className='playRps'>Again</button>
+            <button className='menuBtn' onClick={menu}>Menu</button>
+            <button className='playRps' onClick={again}>Again</button>
         </>
     )
 }

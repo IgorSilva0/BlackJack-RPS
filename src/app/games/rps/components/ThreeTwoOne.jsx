@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Result from './result.jsx';
 
-const ThreeTwoOne = ( { playerChoice, setChoice, setRounds } ) => {
+const ThreeTwoOne = ( { propsObj } ) => {
     const rps = ["rock","paper","scissors"];
     const [pcChoice, setPcChoice] = useState(null)
     const [countDown, setCountDown] = useState(3);
 
-    const propsObj = {
-        playerChoice,
-        setChoice,
-        setRounds,
-        pcChoice
-    }
+    propsObj.pcChoice = pcChoice
 
     useEffect(() => {
         const timer = setTimeout(() => {

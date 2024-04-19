@@ -27,7 +27,7 @@ const Rps = () => {
                     <button className='playRps' onClick={playSound} >PLAY</button>  
                 </>
               ) : (
-              <Choose rounds={rounds} setRounds={setRounds}/>
+              <Choose rounds={rounds} setRounds={setRounds} setStart={setStart}/>
               ) }
             </div>
     )

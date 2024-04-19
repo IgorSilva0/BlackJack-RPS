@@ -1,8 +1,16 @@
 import React, {useState} from 'react'
 import ThreeTwoOne from './ThreeTwoOne.jsx';
 
-const Choose = ( { rounds , setRounds } ) =>{
+const Choose = ( { rounds , setRounds , setStart } ) =>{
     const [playerChoice,setChoice] = useState(null)
+
+    const propsObj = {
+        rounds,
+        setRounds,
+        setStart,
+        playerChoice,
+        setChoice,
+    }
 
     const handleHandClick = (event) => {
         setChoice(event.target.id);
@@ -19,7 +27,7 @@ const Choose = ( { rounds , setRounds } ) =>{
             <img src='/imgs/scissorsHand.png' className='rps' id='scissors' onClick={handleHandClick}/>
          </>
         ) : (
-            <ThreeTwoOne playerChoice={playerChoice} setChoice={setChoice} setRounds={setRounds}/>
+            <ThreeTwoOne propsObj={propsObj}/>
         ) }
         </>
     )
