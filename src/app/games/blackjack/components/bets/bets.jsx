@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Game from '../game/game.jsx'
 
 const Bets = ({ propsObj }) => {
-    const [timer, setTimer] = useState(1)
+    const [timer, setTimer] = useState(13)
 
     const addBet = (event) => {
         let amount = Number(event.target.id)

@@ -34,7 +34,7 @@
 }
 
 .hit {
-  height: 60px;
+  height: 50px;
   width: 75px;
   padding: 10px 15px;
   margin-right: 15px;
@@ -63,7 +63,7 @@
 }
 
 .stand {
-  height: 60px;
+  height: 50px;
   width: 75px;
   padding: 10px 15px;
   margin-right: 25px;

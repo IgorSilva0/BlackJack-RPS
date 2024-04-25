@@ -8,7 +8,9 @@
   text-align: center;
   background-image: url("/imgs/table.jpg");
 }
-
+.introName {
+  padding-top: 150px;
+}
 /* Button style */
 .playBj:hover,
 .playBj:focus {
