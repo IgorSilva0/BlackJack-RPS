@@ -24,7 +24,7 @@ const Result = ({ propsObj }) => {
 
     const menu = (btn) => {
         btn.preventDefault()
-        propsObj.setStart(null)
+        propsObj.setStart(false)
         propsObj.setRounds(1)
     }
     const again = (btn) => {

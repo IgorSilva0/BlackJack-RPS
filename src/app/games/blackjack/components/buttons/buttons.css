@@ -1,0 +1,122 @@
+/* Double up BTN */
+
+.double:hover {
+  color: #000000;
+  background: #ffc400;
+  border: 1px solid #ffc400;
+  box-shadow: 0 0 5px #ffc400, 0 0 20px #ffc400, 0 0 50px #ffc400,
+    0 0 100px #ffc400;
+}
+.double {
+  width: 85px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+  text-shadow: none;
+  background-color: #ffc400e5;
+  cursor: pointer;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+/* Hit BTN */
+
+.hit:hover {
+  color: #000000;
+  background: #30ff3b;
+  border: 1px solid #30ff3b;
+  box-shadow: 0 0 5px #30ff3b, 0 0 20px #30ff3b, 0 0 50px #30ff3b,
+    0 0 100px #30ff3b;
+}
+
+.hit {
+  height: 60px;
+  width: 75px;
+  padding: 10px 15px;
+  margin-right: 15px;
+  margin-left: 25px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+  text-shadow: none;
+  background-color: #30ff3be5;
+  cursor: pointer;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+/* Stand BTN */
+
+.stand:hover {
+  color: #000000;
+  background: #ff2323;
+  border: 1px solid #ff2323;
+  box-shadow: 0 0 5px #ff2323, 0 0 20px #ff2323, 0 0 50px #ff2323,
+    0 0 100px #ff2323;
+}
+
+.stand {
+  height: 60px;
+  width: 75px;
+  padding: 10px 15px;
+  margin-right: 25px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+  text-shadow: none;
+  background-color: #ff2323e5;
+  cursor: pointer;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+/* Split BTN */
+
+.split:hover {
+  color: #000000;
+  background: #00a2ff;
+  border: 1px solid #00a2ff;
+  box-shadow: 0 0 5px #00a2ff, 0 0 20px #00a2ff, 0 0 50px #00a2ff,
+    0 0 100px #00a2ff;
+}
+/* ON */
+.split {
+  width: 85px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+  text-shadow: none;
+  background-color: #00a2ffe5;
+  cursor: pointer;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+/* OFF Default for every BTN */
+.btnOff {
+  width: 85px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+  text-shadow: none;
+  background-color: #777777e5;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
