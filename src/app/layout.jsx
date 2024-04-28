@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 const RootLayout = ({ children }) => (
-  <StrictMode>
+  //<StrictMode>
     <html lang="en">
       <body className={inter.className}>
         <div className="main"> 
@@ -27,7 +27,7 @@ const RootLayout = ({ children }) => (
         </div>
       </body>
     </html>
-  </StrictMode>
+ // </StrictMode>
 )
 
 export default RootLayout

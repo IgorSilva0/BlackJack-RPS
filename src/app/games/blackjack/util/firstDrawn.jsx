@@ -10,7 +10,15 @@ const firstDrawn = (deck) => {
     cards.card3 = `/imgs/cards/${card3.value + card3.suit}.png`;
     cards.card4 = `/imgs/cards/${card4.value + card4.suit}.png`;
 
-    return cards;
+    const playerValues = [card1.value, card3.value];   
+    const dealerValues = [card2.value, card4.value];
+
+    const obj = {
+        playerValues,
+        dealerValues,
+        cards
+    }
+    return obj;
 };
 
 export default firstDrawn;

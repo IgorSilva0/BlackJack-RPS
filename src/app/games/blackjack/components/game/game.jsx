@@ -7,33 +7,63 @@ import Buttons from '../buttons/buttons.jsx';
 const Game = ({ propsObj }) => {
     // State variables initialization
     const [dealerHand, setDealerHand] = useState([]); // Dealer's hand
+    const [dealerValues, setDealerValues] = useState(0); // Dealer hand values
+    const [dealerHasAce, setDealerHasAce] = useState(0); // Check if Ace 
+
     const [playerHand, setPlayerHand] = useState([]); // Player's hand
-    const [dealerNewCard, setDealerNewCard] = useState(null); // Dealer's new card
+    const [playerValues, setPlayerValues] = useState(0); // Player hand values
+    const [playerHasAce, setPlayerHasAce] = useState(0); // Check if Ace 
+
     const [buttons, setButtons] = useState(false); // Button visibility control
     const [gameOver, setGameOver] = useState(false); // Game over status
     const [playerBust, setPlayerBust] = useState(false); // Player's bust status
 
     // Function to initialize the game
-    const initialDraw = () => {
+    const initialDraw = async () => {
         const initialCards = firstDrawn(propsObj.sixDecks); // Initial cards drawn
-        setDealerHand([initialCards.card2]); // Set dealer's hand
-        setPlayerHand([initialCards.card1, initialCards.card3]); // Set player's hand
-        setDealerNewCard(initialCards.card4); // Set dealer's new card
+        
+        // Calculate dealer hand values
+        await Promise.all(initialCards.dealerValues.map(async (element) => {
+            await checkValues(element, 'dealer');
+        }));
+        setDealerHand([initialCards.cards.card2, initialCards.cards.card4]); // Display hand imgs
+    
+        // Calculate player hand values
+        await Promise.all(initialCards.playerValues.map(async (element) => {
+            await checkValues(element, 'player');
+        }));
+        setPlayerHand([initialCards.cards.card1, initialCards.cards.card3]); // Display hand imgs
+    
         setButtons(true); // Show game buttons
         setGameOver(false); // Reset game over status
-    };
+    };    
 
+    async function checkValues(value, who){
+        const faceCards = { J: 10, Q: 10, K: 10 };
+        const numericValue = faceCards[value] || (value === "A" ? 11 : Number(value));
+          
+        if (who === "dealer") {
+              setDealerValues(previous => previous + numericValue)
+              value === 'A' ? setDealerHasAce(previous => previous + 1) : null;
+        } else if (who === "player") {
+              setPlayerValues(previous => previous + numericValue)
+              value === 'A' ? setPlayerHasAce(previous => previous + 1) : null;
+        }
+        else {
+            console.log('Error on checkValues Func.')
+        }
+    }
     // Effect hook to initialize the game when component mounts
     useEffect(() => {
         initialDraw();
     }, []);
-
     // Function to handle player hitting
-    const handleHit = () => {
+    const handleHit = async () => {
         // Allow hitting only if game is not over, player has not busted, and deck is not empty
         if (!gameOver && !playerBust && propsObj.sixDecks.cards.length > 0) {
             const newCard = propsObj.sixDecks.cards.shift(); // Draw a new card from the deck
             setPlayerHand(prevHand => [...prevHand, `/imgs/cards/${newCard.value + newCard.suit}.png`]); // Update player's hand
+            await checkValues(newCard.value, 'player') // Add new value to Player Values
             checkPlayerBust(); // Check if player has busted
         } else {
             console.log("Cannot hit after bust, game over, or if deck is empty."); // Error message if hitting is not allowed
@@ -42,13 +72,12 @@ const Game = ({ propsObj }) => {
   
     // Function to check if player has busted
     const checkPlayerBust = () => {
-        const playerValue = calculateHandValue(playerHand); // Calculate player's hand value
-        // If player's hand value exceeds 21, set player bust status and proceed with dealer's turn
-        if (playerValue > 21) {
+        if (playerValues > 21) {
             setButtons(false); // Hide game buttons
             setPlayerBust(true); // Set player bust status
             dealerLogic([...dealerHand]); // Proceed with dealer's turn
-        }
+        }            
+        return
     };
 
     // Function to handle player standing
@@ -63,10 +92,8 @@ const Game = ({ propsObj }) => {
     };
 
     // Function to simulate dealer's turn
-    const dealerLogic = () => {
-        let updatedDealerHand = [...dealerHand]; // Copy of dealer's hand
-        // Keep drawing cards for the dealer until their hand value is at least 17
-        while (calculateHandValue(updatedDealerHand) < 17) {
+    const dealerLogic = async () => {
+        while (dealerValues < 17) {
             // If the deck is empty, log an error and stop the game
             if (propsObj.sixDecks.cards.length === 0) {
                 console.error("Error: Deck is empty.");
@@ -74,6 +101,7 @@ const Game = ({ propsObj }) => {
             }
             const newCard = propsObj.sixDecks.cards.shift(); // Draw a new card from the deck
             updatedDealerHand.push(`/imgs/cards/${newCard.value + newCard.suit}.png`); // Update dealer's hand
+            await checkValues(newCard.value, 'dealer')
         }
         setDealerHand(updatedDealerHand); // Update dealer's hand
         if (!gameOver) {
@@ -128,7 +156,6 @@ const Game = ({ propsObj }) => {
                 {dealerHand.map((card, index) => (
                     <img key={index} src={card} alt={`card${index}`} className='cards' />
                 ))}
-                {dealerNewCard && <img src={dealerNewCard} alt="newCard" className='cards' />}
             </div>
             <div className='info'>
                 {buttons ? (<h3>Make your decision</h3>) : (<h3>Dealing cards...</h3>)}
