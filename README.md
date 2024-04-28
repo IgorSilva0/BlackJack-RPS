@@ -2,6 +2,11 @@
 
 Welcome to my Web Development Project! This project is currently undergoing a transformation from its original JavaScript and HTML structure to a modern React/Next.js application. While it's not fully finished, I'm excited to share the progress and the direction I'm taking with this migration.
 
+## Product
+
+![Image Alt Text](https://i.imgur.com/jqzTLJZ.png)
+![Image Alt Text](https://i.imgur.com/PWc8fp8.png)
+
 ## Features
 
 ### 1. Rock, Paper, Scissors
